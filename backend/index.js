@@ -1,10 +1,5 @@
 const Glue = require( '@hapi/glue' );
-
-const manifest = {
-	server: {
-		port: 3001,
-	},
-};
+const Manifest = require( './config/manifest' );
 
 const options = {
 	relativeTo: __dirname,
@@ -12,6 +7,7 @@ const options = {
 
 const startServer = async function() {
 	try {
+		const manifest = Manifest.get( '/' );
 		const server = await Glue.compose( manifest, options );
 		await server.start();
 		console.log( 'hapi days!' ); // eslint-disable-line
