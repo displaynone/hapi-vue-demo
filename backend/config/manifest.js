@@ -7,7 +7,14 @@ const criteria = {
 
 const manifest = {
 	server: {
-		port: Config.get( '/port' ),
+		port: Config.get( '/server/port' ),
+	},
+	register: {
+		plugins: [
+			{
+				plugin: './api/home',
+			},
+		],
 	},
 };
 

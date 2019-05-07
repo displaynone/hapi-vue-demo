@@ -9,7 +9,12 @@ const criteria = {
 };
 
 const config = {
-	port: 3001,
+	server: {
+		port: 3001,
+	},
+	website: {
+		name: `WP Desk`,
+	},
 };
 
 const store = new Confidence.Store( config );
