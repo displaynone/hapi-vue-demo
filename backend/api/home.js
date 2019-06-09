@@ -1,6 +1,7 @@
-const Config = require( '../config' );
-
-const websiteName = Config.get( '/website/name' );
+/**
+ * Home route
+ */
+const User = require( '../models/users' );
 
 const register = function( server, serverOptions ) { // eslint-disable-line
 	server.route( {
@@ -12,10 +13,21 @@ const register = function( server, serverOptions ) { // eslint-disable-line
 			notes: 'Server home',
 			auth: false,
 		},
-		handler: function( request, h ) { // eslint-disable-line
-			return {
-				message: `Welcome to ${ websiteName }`,
-			};
+
+		/**
+		 * Route handler
+		 *
+		 * @param {object} request
+		 * @param {object} h Hapi object
+		 * @returns {object}
+		 */
+		handler: async( request, h ) => { // eslint-disable-line
+			try {
+				const result = await User.findAll();
+				return result;
+			} catch ( error ) {
+				return { error: 500 };
+			}
 		},
 	} );
 };

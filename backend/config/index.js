@@ -15,6 +15,9 @@ const config = {
 	website: {
 		name: `WP Desk`,
 	},
+	db: {
+		url: 'mongodb://localhost/wpdesk',
+	},
 };
 
 const store = new Confidence.Store( config );

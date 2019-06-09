@@ -95,5 +95,6 @@ module.exports = {
 			"yoda": "off"
 	},
 	"globals": {
+		"Promise": "readonly"
 	}
 }
