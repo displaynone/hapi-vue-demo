@@ -10,13 +10,16 @@ const criteria = {
 
 const config = {
 	server: {
-		port: 3001,
+		port: process.env.PORT,
 	},
 	website: {
-		name: `WP Desk`,
+		name: 'WP Desk',
 	},
 	db: {
-		url: 'mongodb://localhost/wpdesk',
+		url: process.env.MONGO_URL,
+	},
+	hash: {
+		PASSWORD_HASH: 12,
 	},
 };
 

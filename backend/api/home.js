@@ -2,6 +2,7 @@
  * Home route
  */
 const User = require( '../models/users' );
+const Boom = require( '@hapi/boom' );
 
 const register = function( server, serverOptions ) { // eslint-disable-line
 	server.route( {
@@ -26,7 +27,7 @@ const register = function( server, serverOptions ) { // eslint-disable-line
 				const result = await User.findAll();
 				return result;
 			} catch ( error ) {
-				return { error: 500 };
+				return Boom.badImplementation( 'Error', { error } );
 			}
 		},
 	} );

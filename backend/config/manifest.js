@@ -15,6 +15,9 @@ const manifest = {
 				plugin: './api/home',
 			},
 			{
+				plugin: './api/user',
+			},
+			{
 				plugin: './plugins/db',
 				options: Config.get( '/db' ),
 			},
