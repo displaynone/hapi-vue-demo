@@ -2,4 +2,6 @@
 **/node_modules
 .env
 .vscode
-build
+**/dist
+frontend/package-lock.json
+backend/package-lock.json
