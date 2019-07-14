@@ -1,0 +1,21 @@
+{
+	"extends": "stylelint-config-standard",
+	"rules": {
+		"indentation": "tab",
+		"string-quotes": "double",
+		"no-duplicate-selectors": true,
+		"color-hex-case": "lower",
+		"color-named": "never",
+		"selector-attribute-quotes": "always",
+		"declaration-block-trailing-semicolon": "always",
+		"declaration-no-important": true,
+		"declaration-colon-space-before": "never",
+		"declaration-colon-space-after": "always",
+		"property-no-vendor-prefix": true,
+		"value-no-vendor-prefix": true,
+		"at-rule-no-vendor-prefix": true,
+		"rule-empty-line-before": "always",
+		"selector-no-vendor-prefix": true,
+		"media-feature-name-no-vendor-prefix": true
+	}
+}
