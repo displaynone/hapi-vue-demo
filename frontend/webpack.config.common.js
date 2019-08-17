@@ -32,6 +32,10 @@ module.exports = {
 					'sass-loader',
 				],
 			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				loader: 'file-loader',
+			},
 		],
 	},
 	plugins: [
@@ -45,6 +49,7 @@ module.exports = {
 		extensions: [ '.js', '.vue', '.json' ],
 		alias: {
 			'@': resolve( '' ),
+			icons: resolve( 'node_modules/vue-material-design-icons' ),
 		},
 	},
 };

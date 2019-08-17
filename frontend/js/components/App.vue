@@ -1,26 +1,17 @@
 <template>
-	<header class="hero">
-		<div class="hero-head">
-			<h1>{{ title }}</h1>
-		</div>
-	</header>
+	<div>
+		<v-header />
+		<router-view />
+	</div>
 </template>
 
 <script>
+import header from '@/js/components/layout/Header';
+
 export default {
-	data() {
-		return {
-			title: "Demo site",
-		};
+	name: 'App',
+	components: {
+		'v-header': header,
 	},
 };
 </script>
-
-<style lang="scss" scoped>
-	div {
-
-		h1 {
-			color: #fff;
-		}
-	}
-</style>
