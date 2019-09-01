@@ -8,18 +8,29 @@ const criteria = {
 const manifest = {
 	server: {
 		port: Config.get( '/server/port' ),
+		routes: {
+			cors: {
+				origin: [ '*' ],
+				credentials: true,
+				exposedHeaders: [ 'Authorization' ],
+			},
+		},
 	},
 	register: {
 		plugins: [
+			{
+				plugin: './plugins/auth',
+				options: Config.get( '/auth' ),
+			},
+			{
+				plugin: './plugins/db',
+				options: Config.get( '/db' ),
+			},
 			{
 				plugin: './api/home',
 			},
 			{
 				plugin: './api/user',
-			},
-			{
-				plugin: './plugins/db',
-				options: Config.get( '/db' ),
 			},
 		],
 	},

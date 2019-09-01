@@ -1,5 +1,8 @@
 {
 	"extends": "stylelint-config-standard",
+	"plugins": [
+		"stylelint-scss"
+	],
 	"rules": {
 		"indentation": "tab",
 		"string-quotes": "double",
@@ -16,6 +19,8 @@
 		"at-rule-no-vendor-prefix": true,
 		"rule-empty-line-before": "always",
 		"selector-no-vendor-prefix": true,
-		"media-feature-name-no-vendor-prefix": true
+		"media-feature-name-no-vendor-prefix": true,
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": true
 	}
 }

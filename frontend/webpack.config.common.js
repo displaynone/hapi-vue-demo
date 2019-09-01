@@ -2,10 +2,23 @@ const webpack = require( 'webpack' );
 const path = require( 'path' );
 const VueLoaderPlugin = require( 'vue-loader/lib/plugin' );
 const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
+const dotenv = require( 'dotenv' );
 
 function resolve( dir ) {
 	return path.join( __dirname, '.', dir );
 }
+
+/**
+ * dotenv setting
+ * @link https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
+ */
+const env = dotenv.config().parsed;
+
+// reduce it to a nice object, the same as before
+const envKeys = Object.keys( env ).reduce( ( prev, next ) => {
+	prev[ `process.env.${ next }` ] = JSON.stringify( env[ next ] );
+	return prev;
+}, {} );
 
 module.exports = {
 	mode: 'production',
@@ -39,6 +52,7 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new webpack.DefinePlugin( envKeys ),
 		new webpack.HotModuleReplacementPlugin(),
 		new VueLoaderPlugin(),
 		new StyleLintPlugin( {

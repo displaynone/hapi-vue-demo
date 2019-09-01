@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 // Mongoose schema
 const userSchema = new mongoose.Schema( {
-	userName: String,
+	username: String,
 	firstName: String,
 	lastName: String,
 	email: String,
@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema( {
 		hash: String,
 		active: Boolean,
 	},
+	uuid: String, // JWT id
 } );
 
 /**
@@ -32,6 +33,41 @@ userSchema.static( 'findAll', async function() {
 			}
 			resolve( data );
 		} );
+	} );
+	return result;
+} );
+
+userSchema.static( 'findByUserOrEmail', async function( username, email ) {
+	const result = await new Promise( ( resolve, reject ) => {
+		this.model( 'User' )
+			.findOne( {
+				$or: [
+					{ username: username },
+					{ email: email },
+				],
+			} )
+			.exec( ( error, data ) => {
+				if ( error ) {
+					reject( error );
+				}
+				resolve( data );
+			} );
+	} );
+	return result;
+} );
+
+userSchema.static( 'findByUUID', async function( uuid ) {
+	const result = await new Promise( ( resolve, reject ) => {
+		this.model( 'User' )
+			.findOne( {
+				uuid,
+			} )
+			.exec( ( error, data ) => {
+				if ( error ) {
+					reject( error );
+				}
+				resolve( data );
+			} );
 	} );
 	return result;
 } );

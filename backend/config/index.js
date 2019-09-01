@@ -21,6 +21,11 @@ const config = {
 	hash: {
 		PASSWORD_HASH: 12,
 	},
+	auth: {
+		jwt: {
+			secret: process.env.JWT_SECRET,
+		},
+	},
 };
 
 const store = new Confidence.Store( config );

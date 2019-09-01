@@ -1,0 +1,17 @@
+/**
+ * Bulma helper for forcing margins/paddings
+ * There are 6 sizes of margins/paddings. Sizes are 0.75em times
+ */
+$positions: "", "-top", "-left", "-bottom", "-right";
+$types: "margin", "padding";
+
+@for $i from 1 through 6 {
+	@each $position in $positions {
+		@each $type in $types {
+
+			.has-#{$type}#{$position}-#{$i} {
+				#{$type}#{$position}: $i * 0.75em !important; /* stylelint-disable-line declaration-no-important */
+			}
+		}
+	}
+}

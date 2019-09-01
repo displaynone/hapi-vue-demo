@@ -29,13 +29,49 @@
 
 			<div :class="[ { 'is-active' : showNav }, 'navbar-menu' ]">
 				<div class="navbar-start">
-					<router-link class="navbar-item" to='/'>Home</router-link>
+					<router-link
+						class="navbar-item"
+						to="/"
+					>
+						Home
+					</router-link>
 				</div>
 
 				<div class="navbar-end">
-					<div class="navbar-item">
-						<div class="buttons">
-							<router-link class="button is-light" to='/login'>Log in</router-link>
+					<div
+						v-if="!isLogged"
+						class="navbar-item"
+					>
+						<div
+							class="buttons"
+						>
+							<router-link
+								class="button is-light"
+								to="/login"
+							>
+								Log in
+							</router-link>
+						</div>
+					</div>
+					<div
+						v-if="isLogged"
+						class="navbar-item has-dropdown is-hoverable"
+					>
+						<router-link
+							to="/account"
+							class="navbar-link"
+						>
+							<b-icon
+								icon="account"
+							/>
+						</router-link>
+						<div class="navbar-dropdown is-right">
+							<router-link
+								class="navbar-item"
+								to="/logout"
+							>
+								Log out
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -45,10 +81,14 @@
 </template>
 
 <script>
+import User from '@/js/utils/user';
+const isLogged = new User().isLogged();
+
 export default {
 	data() {
 		return {
 			showNav: false,
+			isLogged,
 		};
 	},
 };
