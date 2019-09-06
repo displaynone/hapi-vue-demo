@@ -1,0 +1,41 @@
+{
+	"api": {
+		"auth": {
+			"error": "Username or password not valid"
+		}
+	},
+	"common": {
+		"notification": {
+			"close": "Close notification"
+		}
+	},
+	"layout": {
+		"header": {
+			"home": "Home",
+			"login": "Log in",
+			"logout": "Log out"
+		}
+	},
+	"page": {
+		"account": {
+			"field": {
+				"email": "E-Mail",
+				"username": "Username"
+			},
+			"subtitle": "Your data",
+			"tile_title": "User info",
+			"title": "Account"
+		},
+		"home": {
+			"subtitle": "Lorem ipsum",
+			"title": "Home"
+		},
+		"login": {
+			"login": "Log in",
+			"password": "Password",
+			"remember": "Remember me",
+			"title": "Login",
+			"username": "Username"
+		}
+	}
+}

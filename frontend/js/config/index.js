@@ -14,6 +14,14 @@ const config = {
 	jwt: {
 		storageKey: 'JWT',
 	},
+	i18n: {
+		defaultLanguage: 'en',
+		fallbackLanguage: 'en',
+		supportedLanguages: [
+			'en',
+			'es',
+		],
+	},
 };
 
 export default config;

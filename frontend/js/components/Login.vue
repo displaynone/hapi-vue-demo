@@ -2,7 +2,7 @@
 	<section class="section">
 		<div class="container">
 			<h1 class="title">
-				Login
+				{{ $t( 'page.login.title' ) }}
 			</h1>
 			<div
 				v-if="error"
@@ -12,7 +12,7 @@
 					class="column is-7-tablet is-6-desktop is-5-widescreen"
 					type="is-danger"
 					has-icon
-					aria-close-label="Close notification"
+					:aria-close-label="$t( 'common.notification.close' )"
 					role="alert"
 					size="is-small	"
 				>
@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-5-tablet is-4-desktop is-3-widescreen has-background-light login-form">
-					<b-field label="Username">
+					<b-field :label="$t( 'page.login.username' )">
 						<b-input
 							v-model="username"
 							value=""
@@ -31,7 +31,7 @@
 							icon="account-circle-outline"
 						/>
 					</b-field>
-					<b-field label="Password">
+					<b-field :label="$t( 'page.login.password' )">
 						<b-input
 							v-model="password"
 							value=""
@@ -41,7 +41,7 @@
 					</b-field>
 					<div class="field">
 						<b-checkbox v-model="remember">
-							Remember me
+							{{ $t( 'page.login.remember' ) }}
 						</b-checkbox>
 					</div>
 					<div class="has-text-right">
@@ -49,7 +49,7 @@
 							type="is-primary"
 							@click="submit"
 						>
-							Log in
+							{{ $t( 'page.login.login' ) }}
 						</b-button>
 					</div>
 				</div>

@@ -1,5 +1,6 @@
 import Config from '@/js/config';
 import Storage from '@/js/utils/storage';
+import i18n from '@/js/plugins/i18n';
 
 /**
  * API backend methods
@@ -32,7 +33,7 @@ class apiFetch {
 			}
 			return {
 				response: false,
-				message: 'Username or password not valid',
+				message: i18n.t( 'api.auth.error' ),
 			};
 		} );
 	}

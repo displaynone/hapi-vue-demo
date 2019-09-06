@@ -33,7 +33,7 @@
 						class="navbar-item"
 						to="/"
 					>
-						Home
+						{{ $t('layout.header.home') }}
 					</router-link>
 				</div>
 
@@ -49,7 +49,7 @@
 								class="button is-light"
 								to="/login"
 							>
-								Log in
+								{{ $t('layout.header.login') }}
 							</router-link>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
 								class="navbar-item"
 								to="/logout"
 							>
-								Log out
+								{{ $t('layout.header.logout') }}
 							</router-link>
 						</div>
 					</div>

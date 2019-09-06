@@ -1,0 +1,41 @@
+{
+	"api": {
+		"auth": {
+			"error": "Usuario o contraseña incorrecta"
+		}
+	},
+	"common": {
+		"notification": {
+			"close": "Cerrar notificación"
+		}
+	},
+	"layout": {
+		"header": {
+			"home": "Inicio",
+			"login": "Acceder",
+			"logout": "Salir"
+		}
+	},
+	"page": {
+		"account": {
+			"field": {
+				"email": "E-Mail",
+				"username": "Username"
+			},
+			"subtitle": "Tus datos",
+			"tile_title": "Info del usuario",
+			"title": "Perfil"
+		},
+		"home": {
+			"subtitle": "Lorem ipsum",
+			"title": "Inicio"
+		},
+		"login": {
+			"login": "Acceder",
+			"password": "Contraseña",
+			"remember": "Recúerdame",
+			"title": "Acceder",
+			"username": "Usuario"
+		}
+	}
+}

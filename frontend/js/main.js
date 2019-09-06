@@ -8,7 +8,8 @@ import '@mdi/font/css/materialdesignicons.min.css';
 import 'icons/styles.css';
 
 import App from './components/App.vue';
-import router from './router';
+import router from '@/js/plugins/router';
+import i18n from '@/js/plugins/i18n';
 
 Vue.use( VueRouter );
 Vue.use( Buefy );
@@ -16,6 +17,7 @@ Vue.use( Buefy );
 new Vue( {
 	el: '#app',
 	router,
+	i18n,
 	components: {
 		App,
 	},

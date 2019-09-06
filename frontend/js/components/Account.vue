@@ -4,10 +4,10 @@
 			<div class="hero-body">
 				<div class="has-text-centered">
 					<h1 class="title">
-						{{ message }}
+						{{ $t( 'page.account.title' ) }}
 					</h1>
 					<h2 class="subtitle">
-						Your data
+						{{ $t( 'page.account.subtitle' ) }}
 					</h2>
 				</div>
 			</div>
@@ -17,7 +17,7 @@
 				<div class="tile is-ancestor">
 					<div class="tile is-parent">
 						<p class="tile is-child notification">
-							Some content
+							{{ $t( 'page.account.tile_title' ) }}
 						</p>
 					</div>
 					<div class="tile is-8 is-parent">
@@ -27,7 +27,7 @@
 									v-for="( value, key ) in user"
 									:key="key"
 								>
-									{{ key }} : {{ value }}
+									{{ $t( `page.account.field.${ key }` ) }} : {{ value }}
 								</li>
 							</ul>
 						</div>
@@ -39,8 +39,6 @@
 </template>
 
 <script>
-// Dummy component
-
 import ApiFectch from '@/js/utils/api';
 import User from '@/js/utils/user';
 
@@ -48,7 +46,6 @@ export default {
 	name: 'Account',
 	data() {
 		return {
-			message: 'Account',
 			user: {},
 		};
 	},

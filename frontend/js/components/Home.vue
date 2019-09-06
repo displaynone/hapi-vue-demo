@@ -3,10 +3,10 @@
 		<div class="hero-body">
 			<div class="container has-text-centered">
 				<h1 class="title">
-					{{ message }}
+					{{ $t( 'page.home.title' ) }}
 				</h1>
 				<h2 class="subtitle">
-					Subtitle
+					{{ $t( 'page.home.subtitle' ) }}
 				</h2>
 			</div>
 		</div>
@@ -16,11 +16,6 @@
 <script>
 export default {
 	name: 'Home',
-	data() {
-		return {
-			message: 'Home page',
-		};
-	},
 };
 </script>
 
