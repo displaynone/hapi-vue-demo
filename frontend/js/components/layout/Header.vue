@@ -47,6 +47,12 @@
 						>
 							<router-link
 								class="button is-light"
+								to="/register"
+							>
+								{{ $t('layout.header.register') }}
+							</router-link>
+							<router-link
+								class="button is-light"
 								to="/login"
 							>
 								{{ $t('layout.header.login') }}

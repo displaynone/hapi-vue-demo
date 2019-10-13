@@ -11,11 +11,15 @@ const userSchema = new mongoose.Schema( {
 	lastName: String,
 	email: String,
 	role: Schema.Types.ObjectId,
-	isEnabled: Boolean,
+	active: Boolean,
 	password: String,
-	resetPassword: {
-		hash: String,
-		active: Boolean,
+	reset: {
+		token: String,
+		time: Date,
+	},
+	activation: {
+		token: String,
+		time: Date,
 	},
 	uuid: String, // JWT id
 } );
@@ -37,6 +41,11 @@ userSchema.static( 'findAll', async function() {
 	return result;
 } );
 
+/**
+ * Finds an user by username or email
+ *
+ * @returns {object}
+ */
 userSchema.static( 'findByUserOrEmail', async function( username, email ) {
 	const result = await new Promise( ( resolve, reject ) => {
 		this.model( 'User' )
@@ -56,11 +65,56 @@ userSchema.static( 'findByUserOrEmail', async function( username, email ) {
 	return result;
 } );
 
+/**
+ * Finds user by UUID
+ *
+ * @returns {object}
+ */
 userSchema.static( 'findByUUID', async function( uuid ) {
 	const result = await new Promise( ( resolve, reject ) => {
 		this.model( 'User' )
 			.findOne( {
 				uuid,
+			} )
+			.exec( ( error, data ) => {
+				if ( error ) {
+					reject( error );
+				}
+				resolve( data );
+			} );
+	} );
+	return result;
+} );
+
+/**
+ * Finds user by activation token
+ *
+ * @returns {object}
+ */
+userSchema.static( 'findByActivationToken', async function( token ) {
+	const result = await new Promise( ( resolve, reject ) => {
+		this.model( 'User' )
+			.findOne( {
+				'activation.token': token,
+			} )
+			.exec( ( error, data ) => {
+				if ( error ) {
+					reject( error );
+				}
+				resolve( data );
+			} );
+	} );
+	return result;
+} );
+
+/**
+ * Finds user by reset token
+ */
+userSchema.static( 'findByResetToken', async function( token ) {
+	const result = await new Promise( ( resolve, reject ) => {
+		this.model( 'User' )
+			.findOne( {
+				'reset.token': token,
 			} )
 			.exec( ( error, data ) => {
 				if ( error ) {

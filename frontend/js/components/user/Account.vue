@@ -49,6 +49,9 @@ export default {
 			user: {},
 		};
 	},
+	/**
+	 * Retrieve user data
+	 */
 	created() {
 		const user = new User().getCurrentUser();
 		new ApiFectch().getUser( user.username )

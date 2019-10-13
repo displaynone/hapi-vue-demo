@@ -13,7 +13,8 @@
 		"header": {
 			"home": "Inicio",
 			"login": "Acceder",
-			"logout": "Salir"
+			"logout": "Salir",
+			"register": "Registrarse"
 		}
 	},
 	"page": {
@@ -35,7 +36,47 @@
 			"password": "Contraseña",
 			"remember": "Recúerdame",
 			"title": "Acceder",
-			"username": "Usuario"
+			"username": "Usuario",
+			"forgot": "¿Olvidaste la contraseña?"
+		},
+		"register": {
+			"email": "Email",
+			"register": "Registrarse",
+			"password": "Contraseña",
+			"repeatPassword": "Repetir Contraseña",
+			"title": "Registro",
+			"username": "Usuario",
+			"confirmation": "Se te ha enviado un email, por favor, sigue las instrucciones para activar tu cuenta."
+		},
+		"activate": {
+			"title": "Activar cuenta",
+			"loading": "El usuario está siendo activado..."
+		},
+		"resend": {
+			"title": "Reenviar el email de activación",
+			"username_or_email": "Usuario o Email",
+			"resend": "Reenviar código",
+			"success": "Email enviado correctamente"
+		},
+		"forgot": {
+			"title": "¿Olvidaste la contraseña?",
+			"email": "Email",
+			"forgot": "Recuperar contraseña",
+			"confirmation": "Te hemos enviado un email, por favor sigue las instrucciones para recuperar tu contraseña."
+		},
+		"reset": {
+			"title": "Recuperar contraseña",
+			"password": "Contraseña",
+			"repeatPassword": "Repetir Contraseña",
+			"reset": "Cambiar",
+			"confirmation": "Tu contraseña ha cambiado, por favor accede al sitio."
 		}
+	},
+	"errors": {
+		"username": "Usuario es obligatorio y debe tener al menos 4 caracteres",
+		"password": "Contrasñea es obligatoria y debe tener al menos 8 caracteres",
+		"repeatPassword": "Las contraseñas deben coincidir",
+		"email": "Dirección de email valida obligatoria",
+		"usernameOrEmail": "Usuario o email obligatorio"
 	}
 }

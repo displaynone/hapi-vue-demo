@@ -11,6 +11,7 @@ const i18n = new VueI18n( {
 	locale: browserLang || Config.i18n.defaultLanguage,
 	fallbackLocale: Config.i18n.fallbackLanguage,
 	messages: { en },
+	silentFallbackWarn: true,
 } );
 
 import( `@/lang/${ browserLang }.json` ).then( messages => {

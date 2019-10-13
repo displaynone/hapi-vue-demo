@@ -15,3 +15,4 @@ I am learning hapi.js and vue.js. This repo contains the steps I am following fo
 6. [Frontend setup](https://sentidoweb.com/2019/07/16/hapi-js-vue-js-inicializar-el-frontend.php)
 7. [Vue routes and dummy login form](https://sentidoweb.com/2019/08/17/hapi-js-vue-js-ejemplo-minimo-de-frontend-formulario-login.php)
 8. [Hapi and Vue calls using JWT](https://sentidoweb.com/2019/09/01/hapi-js-vue-js-llamadas-autenticadas-al-servidor-con-jwt-login.php)
+9. [i18n](https://sentidoweb.com/2019/09/06/hapi-js-vue-js-internacionalizacion-i18n.php)

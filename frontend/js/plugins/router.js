@@ -1,9 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/js/components/Home';
-import Login from '@/js/components/Login';
-import Account from '@/js/components/Account';
-import Logout from '@/js/components/Logout';
+import Login from '@/js/components/user/Login';
+import Account from '@/js/components/user/Account';
+import Logout from '@/js/components/user/Logout';
+import Register from '@/js/components/user/Register';
+import Activate from '@/js/components/user/Activate';
+import ForgotPassword from '@/js/components/user/ForgotPassword';
+import ResendActivation from '@/js/components/user/ResendActivation';
+import ResetPassword from '@/js/components/user/ResetPassword';
 import Storage from '@/js/utils/storage';
 
 Vue.use( Router );
@@ -38,6 +43,46 @@ const router = new Router( {
 			component: Logout,
 			meta: {
 				auth: true,
+			},
+		},
+		{
+			path: '/register',
+			name: 'Register',
+			component: Register,
+			meta: {
+				auth: false,
+			},
+		},
+		{
+			path: '/activate/:token',
+			name: 'Activate',
+			component: Activate,
+			meta: {
+				auth: false,
+			},
+		},
+		{
+			path: '/forgot-password',
+			name: 'ForgotPassword',
+			component: ForgotPassword,
+			meta: {
+				auth: false,
+			},
+		},
+		{
+			path: '/resend-activation',
+			name: 'ResendActivation',
+			component: ResendActivation,
+			meta: {
+				auth: false,
+			},
+		},
+		{
+			path: '/reset-password/:token',
+			name: 'ResetPassword',
+			component: ResetPassword,
+			meta: {
+				auth: false,
 			},
 		},
 	],

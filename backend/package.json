@@ -21,16 +21,20 @@
   },
   "homepage": "https://github.com/displaynone/hapi-backend#readme",
   "dependencies": {
+    "@hapi/address": "^2.1.1",
     "@hapi/boom": "^7.4.2",
     "@hapi/glue": "^6.1.0",
-    "@hapi/hapi": "^18.3.1",
-    "@hapi/joi": "^15.0.3",
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/joi": "^15.1.1",
     "bcrypt": "^3.0.6",
     "confidence": "^4.0.1",
     "dotenv": "^7.0.0",
+    "handlebars": "^4.3.3",
     "hapi-auth-jwt2": "^8.6.1",
+    "hapi-i18n": "^2.1.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.13",
+    "nodemailer": "^6.3.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {

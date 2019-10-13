@@ -9,6 +9,11 @@ const config = {
 		user: {
 			auth: `${ apiURL }user/auth`,
 			get: `${ apiURL }user/`,
+			register: `${ apiURL }user/register`,
+			activate: `${ apiURL }user/activate`,
+			resendActivation: `${ apiURL }user/resend-activation`,
+			resendPassword: `${ apiURL }user/resend-password`,
+			resetPassword: `${ apiURL }user/reset-password`,
 		},
 	},
 	jwt: {

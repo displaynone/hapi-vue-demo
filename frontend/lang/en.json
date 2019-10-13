@@ -13,7 +13,8 @@
 		"header": {
 			"home": "Home",
 			"login": "Log in",
-			"logout": "Log out"
+			"logout": "Log out",
+			"register": "Register"
 		}
 	},
 	"page": {
@@ -35,7 +36,47 @@
 			"password": "Password",
 			"remember": "Remember me",
 			"title": "Login",
-			"username": "Username"
+			"username": "Username",
+			"forgot": "Forgot password?"
+		},
+		"register": {
+			"email": "E-Mail",
+			"register": "Register",
+			"password": "Password",
+			"repeatPassword": "Repeat Password",
+			"title": "Registration",
+			"username": "Username",
+			"confirmation": "An email has been sent, please follow the instructions to activate your account."
+		},
+		"activate": {
+			"title": "Activation",
+			"loading": "User is being activated..."
+		},
+		"resend": {
+			"title": "Resend Activation Code",
+			"username_or_email": "Username or Email",
+			"resend": "Resend code",
+			"success": "Email sent successfully"
+		},
+		"forgot": {
+			"title": "Forgot password?",
+			"email": "E-Mail",
+			"forgot": "Restore password",
+			"confirmation": "An email has been sent, please follow the instructions to reset your password."
+		},
+		"reset": {
+			"title": "Reset password",
+			"password": "Password",
+			"repeatPassword": "Repeat Password",
+			"reset": "Reset",
+			"confirmation": "Your password has been changed, please log in."
 		}
+	},
+	"errors": {
+		"username": "Username is required and must be longer that 4 characters",
+		"password": "Password is required and must be longer that 8 characters",
+		"repeatPassword": "Passwords must match",
+		"email": "Valid email is required",
+		"usernameOrEmail": "Username or email is required"
 	}
 }

@@ -1,0 +1,14 @@
+{{!--
+	Activate password template
+
+	@since 0.10.0
+--}}
+{{> head }}
+{{> body heading=heading }}
+	<h2>{{#i18n}}Activate your account{{/i18n}}</h2>
+	<p>{{#i18n}}Hi,{{/i18n}}</p>
+	<p>{{#i18n}}Thanks for signing up. You must activate your account before loggin in.{{/i18n}}</p>
+	<p>{{#i18n}}Click on the follow button or copy the link directly in your browser.{{/i18n}}</p>
+	<p><a href="{{ activation_url }}" class="btn btn-primary">{{#i18n}}Activate it{{/i18n}}</a></p>
+	<p class="notification">{{ activation_url }}</p>
+{{> footer }}
