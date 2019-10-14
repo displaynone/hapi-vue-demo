@@ -2,7 +2,6 @@
  * User model based on Mongoose
  */
 const mongoose = require( 'mongoose' );
-const Schema = mongoose.Schema;
 
 // Mongoose schema
 const userSchema = new mongoose.Schema( {
@@ -10,7 +9,11 @@ const userSchema = new mongoose.Schema( {
 	firstName: String,
 	lastName: String,
 	email: String,
-	role: Schema.Types.ObjectId,
+	role: {
+		type: String,
+		enum: [ 'client', 'admin' ],
+		default: 'client',
+	},
 	active: Boolean,
 	password: String,
 	reset: {

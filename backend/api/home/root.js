@@ -14,11 +14,9 @@ module.exports = {
 	/**
 	 * Route handler
 	 *
-	 * @param {object} request
-	 * @param {object} h Hapi object
 	 * @returns {object}
 	 */
-	handler: async( request, h ) => { // eslint-disable-line
+	handler: async() => {
 		return {};
 	},
 };

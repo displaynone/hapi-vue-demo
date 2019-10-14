@@ -1,4 +1,5 @@
 import Storage from '@/js/utils/storage';
+import { getTokenData } from '@/js/utils/jwt';
 
 /**
  * User methods
@@ -32,11 +33,7 @@ class user {
 		if ( ! token ) {
 			return null;
 		}
-		return JSON.parse(
-			atob(
-				token.split( '.' )[ 1 ]
-			)
-		);
+		return getTokenData( token );
 	}
 }
 

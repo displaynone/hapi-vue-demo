@@ -12,6 +12,9 @@ module.exports = {
 	method: 'GET',
 	path: '/user/{user?}',
 	options: {
+		app: {
+			roles: [ 'client' ],
+		},
 		tags: [ 'api', 'user', 'list' ],
 		description: 'Server get user',
 		notes: 'Server get user',
@@ -27,10 +30,9 @@ module.exports = {
 	 * Route handler
 	 *
 	 * @param {object} request
-	 * @param {object} h Hapi object
 	 * @returns {object}
 	 */
-	handler: async( request, h ) => { // eslint-disable-line
+	handler: async( request ) => {
 		try {
 			const userData = await User.findOne( { username: request.params.user } ).exec();
 			return Objects.filter( userData.toJSON(), ( key ) => {

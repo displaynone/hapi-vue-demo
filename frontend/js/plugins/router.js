@@ -10,6 +10,7 @@ import ForgotPassword from '@/js/components/user/ForgotPassword';
 import ResendActivation from '@/js/components/user/ResendActivation';
 import ResetPassword from '@/js/components/user/ResetPassword';
 import Storage from '@/js/utils/storage';
+import { getTokenData } from '@/js/utils/jwt';
 
 Vue.use( Router );
 
@@ -35,6 +36,7 @@ const router = new Router( {
 			component: Account,
 			meta: {
 				auth: true,
+				roles: [ 'client' ],
 			},
 		},
 		{
@@ -100,6 +102,10 @@ router.beforeEach( ( to, from, next ) => {
 		// Must be logged
 		} else if ( to.meta.auth === true ) {
 			if ( ! jwtToken ) {
+				next( '/' );
+			}
+			const userData = getTokenData( jwtToken );
+			if ( !! to.meta.roles && ! to.meta.roles.includes( userData.role ) ) {
 				next( '/' );
 			}
 		}

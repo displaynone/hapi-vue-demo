@@ -6,7 +6,15 @@
 const jwt2 = require( 'hapi-auth-jwt2' );
 const User = require( '../models/users' );
 
-const validate = async function( decoded ) {
+const validate = async function( decoded, request ) {
+	const { settings } = request.route;
+	if ( !! settings &&
+		!! settings.app &&
+		!! settings.app.roles &&
+		! settings.app.roles.includes( decoded.role )
+	) {
+		return { isValid: false };
+	}
 	const user = await User.findByUUID( decoded.id );
 	return { isValid: !! user && user.username === decoded.username };
 };

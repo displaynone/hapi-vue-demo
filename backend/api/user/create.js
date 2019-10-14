@@ -30,13 +30,12 @@ module.exports = {
 	 * Route handler
 	 *
 	 * @param {object} request
-	 * @param {object} h Hapi object
 	 * @returns {object}
 	 */
-	handler: async( request, h ) => { // eslint-disable-line
+	handler: async( request ) => {
 		const { __ } = request.i18n;
 		try {
-			// TODO: Add role
+			// Default role client
 			const user = await User
 				.findOne( {
 					$or: [
@@ -62,7 +61,7 @@ module.exports = {
 
 			if ( newUser ) {
 				const emailContent = request.templates.render( {
-					file: '/emails/activate_account.html',
+					file: '/emails/activate_account.hbs',
 					data: {
 						... newUser,
 						activation_url: Config.get( '/website/url' ) + `/activate/${ activation.token }`,

@@ -32,7 +32,7 @@ module.exports = {
 	 * @param {object} h Hapi object
 	 * @returns {object}
 	 */
-	handler: async( request, h ) => { // eslint-disable-line
+	handler: async( request, h ) => {
 		const { __ } = request.i18n;
 		try {
 			const user = await User.findByUserOrEmail( request.payload.username, request.payload.email );
@@ -51,6 +51,7 @@ module.exports = {
 				id: uuid(),
 				exp: new Date().getTime() + ( 180 * 24 * 60 * 60 * 1000 ), // 3 months
 				username: user.username,
+				role: user.role,
 			};
 
 			user.uuid = claims.id;
