@@ -20,9 +20,10 @@ class apiFetch {
 	auth( username, password ) {
 		return fetch( Config.api.user.auth, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ username, password }
-			),
+			body: JSON.stringify( {
+				username,
+				password,
+			} ),
 			headers: {
 				'Content-Language': browserLang,
 			},
@@ -67,9 +68,11 @@ class apiFetch {
 	register( username, password, email ) {
 		return fetch( Config.api.user.register, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ username, password, email }
-			),
+			body: JSON.stringify( {
+				username,
+				password,
+				email,
+			} ),
 			headers: {
 				'Content-Language': browserLang,
 			},
@@ -87,9 +90,7 @@ class apiFetch {
 	activate( token ) {
 		return fetch( Config.api.user.activate, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ token }
-			),
+			body: JSON.stringify( { token } ),
 			headers: {
 				'Content-Language': browserLang,
 			},
@@ -107,9 +108,7 @@ class apiFetch {
 	resendActivation( usernameOrEmail ) {
 		return fetch( Config.api.user.resendActivation, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ usernameOrEmail }
-			),
+			body: JSON.stringify( { usernameOrEmail } ),
 			headers: {
 				'Content-Language': browserLang,
 			},
@@ -127,9 +126,7 @@ class apiFetch {
 	resendPassword( email ) {
 		return fetch( Config.api.user.resendPassword, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ email }
-			),
+			body: JSON.stringify( { email } ),
 			headers: {
 				'Content-Language': browserLang,
 			},
@@ -148,13 +145,34 @@ class apiFetch {
 	resetPassword( password, token ) {
 		return fetch( Config.api.user.resetPassword, {
 			method: 'POST',
-			body: JSON.stringify(
-				{ password, token }
-			),
+			body: JSON.stringify( {
+				password,
+				token,
+			} ),
 			headers: {
 				'Content-Language': browserLang,
 			},
 			mode: 'cors',
+		} ).then( response => response.json() );
+	}
+
+	/**
+	 * Update avatar
+	 *
+	 * @param {object} file File
+	 * @returns {Promise}
+	 */
+	updateAvatar( file ) {
+		const form = new FormData();
+		form.append( 'image', file );
+		form.append( 'type', file.type );
+		return fetch( Config.api.user.updateAvatar, {
+			method: 'POST',
+			body: form,
+			headers: {
+				Authorization: new Storage().getJWTToken(),
+				'Content-Language': browserLang,
+			},
 		} ).then( response => response.json() );
 	}
 }

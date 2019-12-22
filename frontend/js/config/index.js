@@ -14,6 +14,8 @@ const config = {
 			resendActivation: `${ apiURL }user/resend-activation`,
 			resendPassword: `${ apiURL }user/resend-password`,
 			resetPassword: `${ apiURL }user/reset-password`,
+			avatar: `${ apiURL }user/avatar`,
+			updateAvatar: `${ apiURL }user/avatar/update`,
 		},
 	},
 	jwt: {

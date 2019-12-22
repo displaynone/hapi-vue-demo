@@ -21,11 +21,13 @@
 		"account": {
 			"field": {
 				"email": "E-Mail",
-				"username": "Username"
+				"username": "Username",
+				"name": "Name"
 			},
 			"subtitle": "Your data",
 			"tile_title": "User info",
-			"title": "Account"
+			"title": "Account",
+			"edit": "Edit"
 		},
 		"home": {
 			"subtitle": "Lorem ipsum",
@@ -70,6 +72,18 @@
 			"repeatPassword": "Repeat Password",
 			"reset": "Reset",
 			"confirmation": "Your password has been changed, please log in."
+		},
+		"avatar": {
+			"title": "Profile",
+			"subtitle": "Change your avatar",
+			"errors": {
+				"type": "You must update an image"
+			},
+			"drop": {
+				"message": "Please, drop an image or upload it.",
+				"reset": "Upload new image",
+				"submit": "Save image"
+			}
 		}
 	},
 	"errors": {

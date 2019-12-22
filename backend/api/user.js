@@ -13,8 +13,12 @@ const register = function( server ) {
 	const normalizedPath = path.join( __dirname, 'user' );
 
 	fs.readdirSync( normalizedPath ).forEach( file => {
-		const route = require( './user/' + file );
-		server.route( route );
+		const routes = require( './user/' + file );
+		if ( routes.constructor !== Array ) {
+			server.route( routes );
+		} else {
+			routes.forEach( route => server.route( route ) );
+		}
 	} );
 };
 

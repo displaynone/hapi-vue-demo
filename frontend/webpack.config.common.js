@@ -64,6 +64,7 @@ module.exports = {
 		alias: {
 			'@': resolve( '' ),
 			icons: resolve( 'node_modules/vue-material-design-icons' ),
+			cropperjs: resolve( 'node_modules/cropperjs' ),
 		},
 	},
 };

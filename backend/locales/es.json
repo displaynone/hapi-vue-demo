@@ -23,7 +23,6 @@
 	"If you haven't request it, please ignore this email.": "Si no has solicitado recuperar la contraseña, por favor, ignora este email.",
 	"Password Reset": "Contraseña cambiada",
 	"Your password has changed.": "Tu contraseña ha cambiado.",
-	"false": false,
-	"true": true,
-	"http://localhost:9999/activate/6b7073d0-ee10-11e9-8855-1becb820e209": "http://localhost:9999/activate/6b7073d0-ee10-11e9-8855-1becb820e209"
+	"Avatar updated.": "Avatar actualizado.",
+	"There was an error when updating avatar": "Hubo un error a la hora de actualizar el avatar"
 }

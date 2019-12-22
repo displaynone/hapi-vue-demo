@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/js/components/Home';
 import Login from '@/js/components/user/Login';
 import Account from '@/js/components/user/Account';
+import Avatar from '@/js/components/user/Avatar';
 import Logout from '@/js/components/user/Logout';
 import Register from '@/js/components/user/Register';
 import Activate from '@/js/components/user/Activate';
@@ -36,7 +37,15 @@ const router = new Router( {
 			component: Account,
 			meta: {
 				auth: true,
-				roles: [ 'client' ],
+				roles: [ 'client', 'admin' ],
+			},
+		},
+		{
+			path: '/account/avatar',
+			name: 'Avatar',
+			component: Avatar,
+			meta: {
+				auth: true,
 			},
 		},
 		{

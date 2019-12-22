@@ -5,9 +5,8 @@
  * @returns {Object}
  */
 export function getTokenData( token ) {
-	return JSON.parse(
-		atob(
-			token.split( '.' )[ 1 ]
-		)
-	);
+	if ( ! token ) {
+		return null;
+	}
+	return JSON.parse( atob( token.split( '.' )[ 1 ] ) );
 }

@@ -67,9 +67,7 @@
 							to="/account"
 							class="navbar-link"
 						>
-							<b-icon
-								icon="account"
-							/>
+							<img :src="avatar">
 						</router-link>
 						<div class="navbar-dropdown is-right">
 							<router-link
@@ -88,7 +86,9 @@
 
 <script>
 import User from '@/js/utils/user';
-const isLogged = new User().isLogged();
+
+const user = new User();
+const isLogged = user.isLogged();
 
 export default {
 	data() {
@@ -96,6 +96,11 @@ export default {
 			showNav: false,
 			isLogged,
 		};
+	},
+	computed: {
+		avatar: function() {
+			return this.$store.state.user.avatar;
+		},
 	},
 };
 </script>

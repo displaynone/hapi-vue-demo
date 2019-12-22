@@ -21,5 +21,7 @@
 	"Reset password": "Reset password",
 	"If you haven't request it, please ignore this email.": "If you haven't request it, please ignore this email.",
 	"Password Reset": "Password Reset",
-	"Your password has changed.": "Your password has changed."
+	"Your password has changed.": "Your password has changed.",
+	"Avatar updated.": "Avatar updated.",
+	"There was an error when updating avatar": "There was an error when updating avatar"
 }

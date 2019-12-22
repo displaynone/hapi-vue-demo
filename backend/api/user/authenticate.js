@@ -52,6 +52,7 @@ module.exports = {
 				exp: new Date().getTime() + ( 180 * 24 * 60 * 60 * 1000 ), // 3 months
 				username: user.username,
 				role: user.role,
+				avatar: user.avatar,
 			};
 
 			user.uuid = claims.id;

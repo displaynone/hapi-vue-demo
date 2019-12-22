@@ -6,9 +6,11 @@ const mongoose = require( 'mongoose' );
 // Mongoose schema
 const userSchema = new mongoose.Schema( {
 	username: String,
-	firstName: String,
-	lastName: String,
 	email: String,
+	name: {
+		type: String,
+		default: '',
+	},
 	role: {
 		type: String,
 		enum: [ 'client', 'admin' ],
@@ -25,6 +27,7 @@ const userSchema = new mongoose.Schema( {
 		time: Date,
 	},
 	uuid: String, // JWT id
+	avatar: String,
 } );
 
 /**

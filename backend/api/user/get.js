@@ -36,7 +36,7 @@ module.exports = {
 		try {
 			const userData = await User.findOne( { username: request.params.user } ).exec();
 			return Objects.filter( userData.toJSON(), ( key ) => {
-				return [ 'username', 'email' ].includes( key );
+				return [ 'username', 'email', 'name' ].includes( key );
 			} );
 		} catch ( error ) {
 			return Boom.badImplementation( 'Error', { error } );

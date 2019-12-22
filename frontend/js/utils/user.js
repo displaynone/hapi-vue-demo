@@ -1,3 +1,4 @@
+import Config from '@/js/config';
 import Storage from '@/js/utils/storage';
 import { getTokenData } from '@/js/utils/jwt';
 
@@ -34,6 +35,16 @@ class user {
 			return null;
 		}
 		return getTokenData( token );
+	}
+
+	/**
+	 * Gets user avatar
+	 *
+	 * @param {string} username Username
+	 * @returns {Promise}
+	 */
+	getAvatarURL( username ) {
+		return `${ Config.api.user.avatar }/${ username }`;
 	}
 }
 

@@ -13,62 +13,62 @@
   <defs
      id="defs2">
     <marker
-       style="overflow:visible"
+       style="overflow: visible;"
        id="marker1298"
        refX="0"
        refY="0"
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill:#38337d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill: #38337d; fill-opacity: 1; fill-rule: evenodd; stroke: none; stroke-width: 1pt; stroke-opacity: 1;"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path1296" />
     </marker>
     <marker
-       style="overflow:visible"
+       style="overflow: visible;"
        id="marker1264"
        refX="0"
        refY="0"
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill: #000; fill-opacity: 1; fill-rule: evenodd; stroke: #000; stroke-width: 1pt; stroke-opacity: 1;"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path1262" />
     </marker>
     <marker
-       style="overflow:visible"
+       style="overflow: visible;"
        id="marker1236"
        refX="0"
        refY="0"
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill: #000; fill-opacity: 1; fill-rule: evenodd; stroke: #000; stroke-width: 1pt; stroke-opacity: 1;"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path1234" />
     </marker>
     <marker
-       style="overflow:visible"
+       style="overflow: visible;"
        id="marker1214"
        refX="0"
        refY="0"
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill: #000; fill-opacity: 1; fill-rule: evenodd; stroke: #000; stroke-width: 1pt; stroke-opacity: 1;"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path1212" />
     </marker>
     <marker
-       style="overflow:visible"
+       style="overflow: visible;"
        id="Arrow1Lstart"
        refX="0"
        refY="0"
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,10,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill: #000; fill-opacity: 1; fill-rule: evenodd; stroke: #000; stroke-width: 1pt; stroke-opacity: 1;"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path936" />
     </marker>
@@ -92,6 +92,6 @@
        id="path922"
        transform="scale(0.26458333)"
        d="m -337.14258,401.0918 v 27.14258 h -27.14258 v 212.14257 h 240 V 561.0918 H -150 v 52.85547 h -27.14258 V 561.0918 H -150 v -27.14453 h 25.71484 v -25.71289 h -52.85742 v 25.71289 h -26.42969 V 508.23438 H -230 v 25.71289 h -26.42773 V 508.23438 H -230 v -27.85743 h -53.57227 v -52.14257 h -27.14257 V 401.0918 Z m 53.57031,27.14258 h 27.14454 V 401.0918 h -27.14454 z M -230,480.37695 h 26.42773 V 453.94922 H -230 Z m 26.42773,-26.42773 H -150 v -25.71484 h -53.57227 z m 0,-25.71484 V 401.0918 H -230 v 27.14258 z m 53.57227,0 h 25.71484 V 401.0918 H -150 Z m 0,25.71484 v 26.42773 h 25.71484 v -26.42773 z m -53.57227,26.42773 v 27.85743 h 26.42969 v -27.85743 z m -133.57031,-26.42773 h 26.42774 v 26.42773 h -26.42774 z M -230,561.0918 h 26.42773 v 25.71289 H -230 Z"
-       style="fill:#38337d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1298)" />
+       style="fill: #38337d; fill-opacity: 1; fill-rule: evenodd; stroke: none; stroke-width: 0.99999994px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; marker-end: url(#marker1298);" />
   </g>
 </svg>

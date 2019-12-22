@@ -48,6 +48,16 @@ const config = {
 			expiration: 3 * 60 * 60 * 1000, // 3 hours
 		},
 	},
+	store: {
+		path: {
+			avatar: __dirname + '/../../storage/avatar/',
+		},
+	},
+	frontend: {
+		assets: {
+			avatar: __dirname + '/../../frontend/assets/images/avatar.svg',
+		},
+	},
 };
 
 const store = new Confidence.Store( config );
