@@ -104,7 +104,7 @@ import { USER_SET_AVATAR } from '@/js/store/mutation-types';
 
 const user = new User();
 const userData = user.getCurrentUser();
-const avatar = user.getAvatarURL( userData.username );
+const avatar = user.getAvatarURL( userData ? userData.username : null );
 
 export default {
 	name: 'Avatar',
